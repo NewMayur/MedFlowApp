@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[UserRoles]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [RoleName] NVARCHAR(20) NOT NULL, 
+    [CanCreateTask] BIT NOT NULL DEFAULT 0, 
+    [CanAssignTask] BIT NOT NULL DEFAULT 0
+)

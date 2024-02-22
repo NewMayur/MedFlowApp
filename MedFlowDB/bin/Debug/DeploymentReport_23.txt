@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       [dbo].[Tasks]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Tasks] (Default Constraint)
+     Recreate table
+       [dbo].[Tasks] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_Tasks_Users] (Foreign Key)
+     Create
+       [dbo].[FK_Tasks_Users] (Foreign Key)

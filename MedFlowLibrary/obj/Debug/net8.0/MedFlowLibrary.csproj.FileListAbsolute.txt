@@ -1,0 +1,13 @@
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\bin\Debug\net8.0\MedFlowLibrary.deps.json
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\bin\Debug\net8.0\MedFlowLibrary.dll
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\bin\Debug\net8.0\MedFlowLibrary.pdb
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.csproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.sourcelink.json
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.dll
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\refint\MedFlowLibrary.dll
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.pdb
+C:\Users\ADMIN\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\ref\MedFlowLibrary.dll
