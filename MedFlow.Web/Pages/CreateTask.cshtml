@@ -1,0 +1,14 @@
+﻿@page
+@model MedFlow.Web.Pages.CreateTaskModel
+@{
+}
+
+<h1>Create A Task</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Title"></label>
+        <input asp-for="@Model.Title" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

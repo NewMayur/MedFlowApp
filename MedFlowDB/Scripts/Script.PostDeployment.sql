@@ -33,6 +33,6 @@ END
 
 IF NOT EXISTS (SELECT 1 FROM Tasks)
     BEGIN
-        INSERT INTO Tasks(Title, DateCreated, Status, CreatedBy, AssignedTo) 
+        INSERT INTO dbo.Tasks(Title, DateCreated, Status, CreatedBy, AssignedTo) 
         VALUES ('Task1', '2024-02-02', 0, 1, 2);
 END

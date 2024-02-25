@@ -27,7 +27,7 @@ namespace MedFlowLibrary.Databases
             string connetionString = _config.GetConnectionString(connectionStringName);
             CommandType commandType = CommandType.Text;
 
-            if (isStoredProcedure != null)
+            if (isStoredProcedure == true)
             {
                 commandType = CommandType.StoredProcedure;
             }
@@ -47,7 +47,7 @@ namespace MedFlowLibrary.Databases
             string connectionString = _config.GetConnectionString(connectionStringName);
             CommandType commandType = CommandType.Text;
 
-            if (isStoredProcedure = true)
+            if (isStoredProcedure == true)
             {
                 commandType = CommandType.StoredProcedure;
             }

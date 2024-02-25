@@ -58,16 +58,26 @@
     <Folder Include="dbo\Tables" />
     <Folder Include="Publish Profiles" />
     <Folder Include="Scripts" />
+    <Folder Include="dbo\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\UserRoles.sql" />
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\Tasks.sql" />
+    <Build Include="dbo\Stored Procedures\spGetTasks_ById&amp;Assignment.sql" />
+    <Build Include="dbo\Stored Procedures\spGetUsers_ByAssignment.sql" />
+    <Build Include="dbo\Stored Procedures\spGetUser_ById.sql" />
+    <Build Include="dbo\Stored Procedures\spInsert_Task.sql" />
+    <Build Include="dbo\Stored Procedures\spGetTasks_ById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="MedFlowDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\MedFlowDB.publish.xml" />
+    <None Include="Publish Profiles\MedFlowDB.publish.xml" />
   </ItemGroup>
 </Project>
