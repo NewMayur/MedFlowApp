@@ -7,8 +7,28 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="@Model.Title"></label>
-        <input asp-for="@Model.Title" />
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+    </div>
+    <div class="form-group">
+        <label asp-for="CreatedByUserId">Select Creator:</label>
+        <select asp-for="CreatedByUserId" class="form-control">
+            <option value="">Select a Creator</option>
+            @foreach (var creator in Model.Creators)
+            {
+                <option value="@creator.Id">@creator.FirstName @creator.LastName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="AssginedToUserId">Select Assignee:</label>
+        <select asp-for="AssginedToUserId" class="form-control">
+            <option value="">Select an Assignee</option>
+            @foreach (var assignee in Model.Assignee)
+            {
+                <option value="@assignee.Id">@assignee.FirstName @assignee.LastName</option>
+            }
+        </select>
     </div>
     <button type="submit" class="btn btn-primary">Create</button>
 </form>

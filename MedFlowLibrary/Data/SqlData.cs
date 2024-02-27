@@ -20,7 +20,7 @@ namespace MedFlowLibrary.Data
         }
         public List<TaskModel> GetTasksByIdAssignment(int userId, bool isAssigned)
         {
-            var parameters = new { userId, isAssigned };
+            var parameters = new { userId = userId, isAssigned = isAssigned };
             var tasks = _db.LoadData<TaskModel, dynamic>("dbo.spGetTasks_ById&Assignment",
                                                           parameters,
                                                           connectionStringName,
@@ -30,37 +30,38 @@ namespace MedFlowLibrary.Data
         }
 
 
+
         public List<UserModel> GetUsersByAssignment(bool canAssign)
         {
             return _db.LoadData<UserModel, dynamic>("dbo.spGetUsers_ByAssignment",
-                                                    new { canAssign },
+                                                    new { canAssignTask = canAssign },
                                                     connectionStringName,
                                                     true);
         }
-        public void CreateTask(string title,
-                               bool status,
-                               DateTime dateCreated,
-                               int creatorId,
-                               int assigneeId)
+        public void CreateTask(string title, bool status, DateTime dateCreated, int creatorId, int assigneeId)
         {
-            UserModel creator = _db.LoadData<UserModel, dynamic>("select u.Id from dbo.Users",
-                                                                 new { creatorId },
-                                                                 connectionStringName,
-                                                                 false).First();
-            dateCreated = DateTime.Now.Date;
+            // Check if the creatorId exists in the Users table
+            bool creatorExists = _db.LoadData<int, dynamic>("SELECT TOP 1 Id FROM dbo.Users WHERE Id = @Id", new { Id = creatorId }, connectionStringName, false).Any();
 
+            if (!creatorExists)
+            {
+                throw new Exception("CreatorId does not exist in the Users table.");
+            }
+
+            // Proceed with inserting the task
             _db.SaveData("dbo.spInsert_Task",
                          new
                          {
                              title,
-                             status = 0,
-                             dateCreated = dateCreated.ToString("yyyy-MM-dd"),
-                             creator = creator.Id,
-                             assigneeId
+                             dateCreated = dateCreated.ToString("yyyy-MM-dd HH:mm:ss"),
+                             createdBy = creatorId,
+                             assignedTo = assigneeId
                          },
                          connectionStringName,
                          true);
         }
+
+
         public List<UserModel> GetUserById(int userId)
         {
             return _db.LoadData<UserModel, dynamic>("dbo.spGetUser_ById",
@@ -68,5 +69,17 @@ namespace MedFlowLibrary.Data
                                                     connectionStringName,
                                                     true);
         }
+        public void UpdateTaskStatus(int taskId)
+        {
+            _db.SaveData("dbo.spUpdate_TaskStatus",
+                         new
+                         {
+                             taskId
+                         },
+                         connectionStringName,
+                         true);
+        }
+
     }
+
 }

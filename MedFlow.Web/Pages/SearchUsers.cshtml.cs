@@ -9,16 +9,16 @@ namespace MedFlow.Web.Pages
     {
         private readonly IDatabaseData _db;
 
-        [BindProperty]
-        public int UserId { get; set; } = 1;
-        public List<UserModel> Users { get; set; }
+        public List<UserModel> Creators { get; set; }
+
+        //public bool CanAssign { get; set; } = true;
         public SearchUsersModel(IDatabaseData db)
         {
             _db = db;
         }
         public void OnGet()
         {
-            Users = _db.GetUserById(UserId);
+            Creators = _db.GetUsersByAssignment(false);
         }
     }
 }

@@ -1,0 +1,58 @@
+﻿@page
+@model MedFlow.Web.Pages.AssignedTasksModel
+@{
+}
+
+<h1>Assigned Tasks</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="AssignedTo">Select Assignee:</label>
+        <select asp-for="AssignedTo" class="form-control">
+            <option value="">Select an Assignee</option>
+            @foreach (var assignee in Model.Assignee)
+            {
+                <option value="@assignee.Id">@assignee.FirstName @assignee.LastName</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary">View Tasks</button>
+    </div>
+</form>
+
+@if (Model.Tasks != null && Model.Tasks.Count > 0)
+{
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th>Created By</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model.Tasks)
+            {
+                <tr>
+                    <td>
+                        <strong>@task.Title</strong><br />
+                    </td>
+                    <td>@task.DateCreated</td>
+                    <td>@(task.Status ? "Done" : "Pending")</td>
+                    <td>@task.CreatedBy</td>
+                    <td>
+                        @if (!task.Status)
+                        {
+                            <form method="post" asp-page-handler="markAsDone">
+                                <input type="hidden" name="taskId" value="@task.Id" />
+                                <button type="submit" class="btn btn-success">Done</button>
+                            </form>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -2,13 +2,15 @@
 	@canAssignTask bit
 AS
 
-begin
-	set nocount on;
+BEGIN
+    SET NOCOUNT ON;
 
-	SELECT
-    u.FirstName,
-    u.LastName
-	FROM dbo.Users u
-	INNER JOIN dbo.UserRoles ur ON u.UserRoleId = ur.Id
-	WHERE ur.CanAssignTask = @canAssignTask;
-end
+    SELECT
+        u.Id,
+        u.FirstName,
+        u.LastName,
+        u.UserRoleId
+    FROM dbo.Users u
+    INNER JOIN dbo.UserRoles ur ON u.UserRoleId = ur.Id
+    WHERE ur.CanAssignTask = @canAssignTask;
+END
