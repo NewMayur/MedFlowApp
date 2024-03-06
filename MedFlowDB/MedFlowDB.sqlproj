@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{5f62526f-0143-432b-905c-a38a7130e110}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath />
     <RootNamespace>MedFlowDB</RootNamespace>
@@ -79,6 +79,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\MedFlowDB.publish.xml" />
-    <None Include="Publish Profiles\MedFlowDB.publish.xml" />
   </ItemGroup>
 </Project>
