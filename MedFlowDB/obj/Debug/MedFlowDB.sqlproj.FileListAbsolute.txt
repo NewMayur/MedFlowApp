@@ -14,3 +14,7 @@ C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\bin\Debug\MedFlowDB.pdb
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.sqlproj.AssemblyReference.cache
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.dll
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.pdb
+C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\Model.xml
+C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\refactor.xml
+C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\postdeploy.sql
+C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\predeploy.sql
