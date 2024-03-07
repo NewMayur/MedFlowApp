@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MedFlowLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+103b349e03d0774b66b044f3e7a89574d07dc74a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2764e1558f92d00ba66f64ce8db8afb40f5417ea")]
 [assembly: System.Reflection.AssemblyProductAttribute("MedFlowLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MedFlowLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

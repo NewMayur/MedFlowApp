@@ -24,3 +24,6 @@ C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLi
 C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\refint\MedFlowLibrary.dll
 C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowLibrary.pdb
 C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\ref\MedFlowLibrary.dll
+C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\bin\Debug\net8.0\MedFlowDB.dll
+C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\bin\Debug\net8.0\MedFlowDB.pdb
+C:\Users\newor\source\repos\MedFlowApp\MedFlowLibrary\obj\Debug\net8.0\MedFlowL.BA5140F0.Up2Date
