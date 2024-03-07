@@ -70,6 +70,7 @@
     <Build Include="dbo\Stored Procedures\spInsert_Task.sql" />
     <Build Include="dbo\Stored Procedures\spGetTasks_ById.sql" />
     <Build Include="dbo\Stored Procedures\spUpdate_TaskStatus.sql" />
+    <Build Include="Scripts\InitialSchema.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="MedFlowDB.refactorlog" />
