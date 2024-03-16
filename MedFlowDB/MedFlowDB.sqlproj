@@ -75,9 +75,9 @@
     <RefactorLog Include="MedFlowDB.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+    <None Include="Publish Profiles\MedFlowDB.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Publish Profiles\MedFlowDB.publish.xml" />
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

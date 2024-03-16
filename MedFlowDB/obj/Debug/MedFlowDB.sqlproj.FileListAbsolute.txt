@@ -4,3 +4,9 @@ C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\bin\Debug\MedFlowDB.pdb
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.sqlproj.AssemblyReference.cache
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.dll
 C:\Users\newor\source\repos\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.pdb
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\bin\Debug\MedFlowDB.dacpac
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\bin\Debug\MedFlowDB.dll
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\bin\Debug\MedFlowDB.pdb
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.sqlproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.dll
+C:\Users\ADMIN\source\repos\NewMayur\MedFlowApp\MedFlowDB\obj\Debug\MedFlowDB.pdb

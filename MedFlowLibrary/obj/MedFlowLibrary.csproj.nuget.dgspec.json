@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\newor\\source\\repos\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj": {}
+    "C:\\Users\\ADMIN\\source\\repos\\NewMayur\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\newor\\source\\repos\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj": {
+    "C:\\Users\\ADMIN\\source\\repos\\NewMayur\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\newor\\source\\repos\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\NewMayur\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj",
         "projectName": "MedFlowLibrary",
-        "projectPath": "C:\\Users\\newor\\source\\repos\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj",
-        "packagesPath": "C:\\Users\\newor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\newor\\source\\repos\\MedFlowApp\\MedFlowLibrary\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\source\\repos\\NewMayur\\MedFlowApp\\MedFlowLibrary\\MedFlowLibrary.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\NewMayur\\MedFlowApp\\MedFlowLibrary\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\newor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -74,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
