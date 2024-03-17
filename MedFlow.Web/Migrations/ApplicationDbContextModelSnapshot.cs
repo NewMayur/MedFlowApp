@@ -107,6 +107,11 @@ namespace MedFlow.Web.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
+
                     b.Property<string>("Name")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -124,25 +129,9 @@ namespace MedFlow.Web.Migrations
 
                     b.ToTable("AspNetRoles", (string)null);
 
-                    b.HasData(
-                        new
-                        {
-                            Id = "148fda72-89c8-4aee-8372-6bff301a8267",
-                            Name = "admin",
-                            NormalizedName = "admin"
-                        },
-                        new
-                        {
-                            Id = "440fbf82-f179-4323-9033-506dd58049fa",
-                            Name = "intern",
-                            NormalizedName = "intern"
-                        },
-                        new
-                        {
-                            Id = "886373b7-db3d-4239-8e9a-8903d8134a66",
-                            Name = "doctor",
-                            NormalizedName = "doctor"
-                        });
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityRole");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -198,10 +187,12 @@ namespace MedFlow.Web.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -238,10 +229,12 @@ namespace MedFlow.Web.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -249,6 +242,45 @@ namespace MedFlow.Web.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("MedFlow.Web.Models.ApplicationRole", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole");
+
+                    b.Property<bool>("CanAssignTask")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanCreateTask")
+                        .HasColumnType("bit");
+
+                    b.HasDiscriminator().HasValue("ApplicationRole");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "48d7c3d6-e45a-4e6c-ac3d-ccc66e36717d",
+                            Name = "admin",
+                            NormalizedName = "admin",
+                            CanAssignTask = true,
+                            CanCreateTask = true
+                        },
+                        new
+                        {
+                            Id = "4fa86f8b-bf99-4cee-a6e5-f4b20a0ee2a0",
+                            Name = "intern",
+                            NormalizedName = "intern",
+                            CanAssignTask = false,
+                            CanCreateTask = false
+                        },
+                        new
+                        {
+                            Id = "9d13346f-30b6-4584-95ad-6ae33b1bf618",
+                            Name = "doctor",
+                            NormalizedName = "doctor",
+                            CanAssignTask = false,
+                            CanCreateTask = true
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

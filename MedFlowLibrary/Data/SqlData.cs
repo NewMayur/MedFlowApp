@@ -21,10 +21,10 @@ namespace MedFlowLibrary.Data
         public List<TaskModel> GetTasksByIdAssignment(int userId, bool isAssigned)
         {
             var parameters = new { userId = userId, isAssigned = isAssigned };
-            var tasks = _db.LoadData<TaskModel, dynamic>("dbo.spGetTasks_ById&Assignment",
+            var tasks = _db.LoadData<TaskModel, dynamic>("select * from dbo.Tasks",
                                                           parameters,
                                                           connectionStringName,
-                                                          true);
+                                                          false);
 
             return tasks;
         }
@@ -33,10 +33,10 @@ namespace MedFlowLibrary.Data
 
         public List<UserModel> GetUsersByAssignment(bool canAssign)
         {
-            return _db.LoadData<UserModel, dynamic>("dbo.spGetUsers_ByAssignment",
+            return _db.LoadData<UserModel, dynamic>("select * from dbo.Users",
                                                     new { canAssignTask = canAssign },
                                                     connectionStringName,
-                                                    true);
+                                                    false);
         }
         public void CreateTask(string title, bool status, DateTime dateCreated, int creatorId, int assigneeId)
         {

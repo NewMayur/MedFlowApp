@@ -24,7 +24,6 @@ namespace MedFlow.Web.Pages
         public int AssginedToUserId { get; set; }
 
 
-        public List<UserModel> Creators { get; set; }
         public List<UserModel> Assignee { get; set; }
 
         public CreateTaskModel(IDatabaseData db)
@@ -35,7 +34,6 @@ namespace MedFlow.Web.Pages
         public void OnGet()
         {
 
-            Creators = _db.GetUsersByAssignment(true);
             Assignee = _db.GetUsersByAssignment(false);
         }
 

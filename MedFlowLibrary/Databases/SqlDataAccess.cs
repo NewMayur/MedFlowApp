@@ -34,7 +34,7 @@ namespace MedFlowLibrary.Databases
 
             using (IDbConnection connection = new SqlConnection(connetionString))
             {
-                List<T> rows = connection.Query<T>(sqlStatement, parameters, commandType: commandType).ToList();
+                 List<T> rows = connection.Query<T>(sqlStatement, parameters, commandType: commandType).ToList();
                 return rows;
             }
         }

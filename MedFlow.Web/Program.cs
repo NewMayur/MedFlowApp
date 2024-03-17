@@ -1,3 +1,4 @@
+using MedFlow.Web.Areas.Identity.Pages.Account;
 using MedFlow.Web.Models;
 using MedFlow.Web.Services;
 using MedFlowLibrary.Data;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,13 +31,14 @@ builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("SqlDb");
+    var connectionString = builder.Configuration.GetConnectionString("AuthDb");
     options.UseSqlServer(connectionString);
 });
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
 //builder.Services.AddDbContext<ApplicationDbContext>(options =>
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlDb")));
